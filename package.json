@@ -1,0 +1,57 @@
+{
+  "name": "@meser10/mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server for the Meser10 email & SMS platform. Tools are generated from the live WSDL, so every API capability is covered by construction.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "meser10-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsc",
+    "prepare": "npm run build",
+    "start": "node dist/index.js",
+    "dev": "tsc --watch",
+    "introspect": "node dist/cli/introspect.js",
+    "test": "node test/run.mjs && node test/e2e.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "fast-xml-parser": "^4.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  },
+  "homepage": "https://www.meser10.co.il/features/mcp-server/",
+  "bugs": {
+    "url": "https://www.meser10.co.il/features/mcp-server/",
+    "email": "support@meser10.co.il"
+  },
+  "author": "Meser 10 Ltd. <support@meser10.co.il> (https://www.meser10.co.il)",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "meser10",
+    "email-marketing",
+    "sms",
+    "newsletter",
+    "soap",
+    "israel",
+    "claude",
+    "llm-tools"
+  ],
+  "publishConfig": {
+    "access": "public"
+  }
+}
