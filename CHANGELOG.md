@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.1 - 2026-09-18
+
+Packaging only. Nothing about the server's behaviour or any tool has changed.
+
+- Added the `repository` field. Without it npm showed no link to the source, and the
+  directories that index MCP servers had no way to tie the package to this repo.
+- `bugs.url` now points at the GitHub issue tracker instead of the marketing page.
+
 ## 1.0.0 - 2026-09-12
 
 First public release.
