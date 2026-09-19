@@ -1,5 +1,13 @@
 # Changelog
 
+## 1.0.2 - 2026-09-18
+
+Packaging only. Nothing about the server's behaviour or any tool has changed.
+
+- Added the `mcpName` field, set to `io.github.meser10/meser10-mcp`. The official MCP
+  Registry reads it from the published tarball to prove that the package and the registry
+  entry belong to the same owner. Without it the registry refuses the listing.
+
 ## 1.0.1 - 2026-09-18
 
 Packaging only. Nothing about the server's behaviour or any tool has changed.
