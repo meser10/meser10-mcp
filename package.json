@@ -1,6 +1,7 @@
 {
   "name": "@meser10/mcp-server",
-  "version": "1.0.1",
+  "version": "1.0.2",
+  "mcpName": "io.github.meser10/meser10-mcp",
   "description": "MCP server for the Meser10 email & SMS platform. Tools are generated from the live WSDL, so every API capability is covered by construction.",
   "license": "MIT",
   "type": "module",
