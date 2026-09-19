@@ -1,0 +1,53 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.meser10/meser10-mcp",
+  "description": "Operate the Meser 10 email and SMS platform from any MCP client. Read-only by default.",
+  "repository": {
+    "url": "https://github.com/meser10/meser10-mcp",
+    "source": "github"
+  },
+  "version": "1.0.2",
+  "websiteUrl": "https://www.meser10.co.il/features/mcp-server/",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@meser10/mcp-server",
+      "version": "1.0.2",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "MESER10_API_KEY",
+          "description": "API key issued in the Meser 10 UI under My Account, Advanced settings, API settings.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "MESER10_USER_ID",
+          "description": "Meser 10 account number. Not a secret. Optional: 17 of the 61 operations authenticate on the key alone, the other 44 need it.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string"
+        },
+        {
+          "name": "MESER10_MODE",
+          "description": "Safety gate: read (default), write, send or destructive. Each level adds tools; send delivers to real recipients and spends credit.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string",
+          "default": "read"
+        },
+        {
+          "name": "MESER10_MAX_RECIPIENTS",
+          "description": "Refuses any single send targeting more addresses than this cap.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "number",
+          "default": "100"
+        }
+      ]
+    }
+  ]
+}
