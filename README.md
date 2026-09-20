@@ -4,6 +4,18 @@ Connect the Meser10 email & SMS platform to any MCP client (Claude, Cursor, or y
 
 > תיעוד בעברית, כולל התקנה מודרכת: https://www.meser10.co.il/features/mcp-server/
 
+[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-io.github.meser10%2Fmeser10--mcp-blue)](https://registry.modelcontextprotocol.io/v0/servers?search=meser10)
+
+**Listed in the official MCP Registry** since 19 September 2026 as `io.github.meser10/meser10-mcp`
+(v1.0.2, MIT). Verify independently, no account needed:
+
+```
+https://registry.modelcontextprotocol.io/v0/servers?search=meser10
+```
+
+It is the only Israeli email/SMS marketing platform whose MCP server appears in the official
+registry.
+
 **Tools are generated from the live WSDL.** Nobody hand-writes 61 tool definitions here, which
 means the server covers every API capability by construction and does not drift when the platform
 ships a new operation.
