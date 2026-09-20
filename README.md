@@ -13,8 +13,9 @@ Connect the Meser10 email & SMS platform to any MCP client (Claude, Cursor, or y
 https://registry.modelcontextprotocol.io/v0/servers?search=meser10
 ```
 
-It is the only Israeli email/SMS marketing platform whose MCP server appears in the official
-registry.
+Two Israeli email/SMS marketing platforms appear in the official registry. This is the only one of
+the two published as open source and installable as a package; the other is a remote endpoint with
+no repository and no package.
 
 **Tools are generated from the live WSDL.** Nobody hand-writes 61 tool definitions here, which
 means the server covers every API capability by construction and does not drift when the platform
