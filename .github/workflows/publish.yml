@@ -10,17 +10,29 @@
 # file publish.yml. If this file is ever renamed, that field has to change too
 # or publishing stops working.
 #
-# To release: bump the version in package.json, commit, then
+# To release: bump the version in package.json, commit, tag it
 #   git tag v1.0.3 && git push --tags
-# The tag has to match the version in package.json, and the job below refuses
-# to publish if it does not.
+# then run this workflow from the Actions tab. The tag has to match the version
+# in package.json, and the job below refuses to publish if it does not. Until
+# the Trusted Publisher above exists, publishing from a laptop with a granular
+# token is still the working route.
 
 name: Publish to npm
 
+# Manual only, on purpose.
+#
+# This job authenticates to npm with OIDC alone, which works only once a
+# Trusted Publisher has been configured on npmjs.com for this package
+# (Settings, Trusted Publisher, GitHub Actions). Until that exists npm answers
+# the publish with a 404, so a tag push would fail every time and mail a
+# failure notice on every release. It is wired to workflow_dispatch so the tag
+# stays a tag, and publishing is a deliberate click.
+#
+# Once the Trusted Publisher is configured, restore the tag trigger by putting
+# these two lines back above workflow_dispatch:
+#   push:
+#     tags: ['v*']
 on:
-  push:
-    tags:
-      - 'v*'
   workflow_dispatch:
 
 permissions:
